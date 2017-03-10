@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Главная страница</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>jQuery Mobile</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 </head>
+
 <body>
-	
+
+	<div data-role="page" data-theme="b">
+		<div data-role="header">
+			<h1>Изучаем jQuery Mobile</h1>
+		</div>
+
+		<div data-role="content" class="ui-content">
+			<h2>Заголовок второго уровня</h2>
+			<p>Здесь текст</p>
+
+			<form>
+				<label for="slider-2">Input slider:</label>
+				<input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100">
+
+				<a href="#" data-role="button" data-icon="star">Отправить</a>
+
+			</form>
+		</div>
+
+		<div data-role="footer">
+			<a href="#">Просто ссылка</a>
+			<ul data-role="list-view" data-inset="true" data-filter="true">
+				<li><a href="#">Первый пункт</a>
+					<ul>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Второй пункт</a></li>
+				<li><a href="#">Третий пункт</a></li>
+				<li><a href="#">Четвёртый пункт</a></li>
+			</ul>
+
+			<p>2017 © <a href="#">Copyright</a></p>
+		</div>
+	</div>
+
 </body>
+
 </html>
