@@ -6,56 +6,53 @@
 
 	<title>jQuery Mobile</title>
 	<script src="jquery/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="jquery/jquery.min.css">
+	
 	<link rel="stylesheet" href="jquery/jquery.mobile.icons-1.4.5.min.css">
 	<link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.5.min.css">
 	<link rel="stylesheet" href="jquery/jquery.mobile.theme-1.4.5.min.css">
 	<link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
-	
+
 	<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
 
-	<div data-role="page" data-theme="b">
+	<div data-role="page" data-theme="b" id="page-1">
 		<div data-role="header">
-			<h1>Изучаем jQuery Mobile</h1>
+			<h1>Авторизация</h1>
 		</div>
 
 		<div data-role="content" class="ui-content">
-			<h2>Заголовок второго уровня</h2>
-			<p>Здесь текст</p>
+			<p>Авторизируйтесь, чтобы продолжить работу</p>
 
-			<form>
-				<label for="slider-2">Input slider:</label>
-				<input type="range" name="slider-2" id="slider-2" value="25" min="0" max="100">
+			<div class="authRes"></div>
+			<form method="post" id="formAuth">
+				<input type="text" name="login" placeholder="Логин" required>
+				<input type="password" name="pass" placeholder="Пароль" required>
 
-				<a href="#" data-role="button" data-icon="star">Отправить</a>
-
+				<input type="submit" name="go-auth" value="Войти">
 			</form>
-		</div>
 
-		<div data-role="footer">
-			<a href="#">Просто ссылка</a>
-			<ul data-role="list-view" data-inset="true" data-filter="true">
-				<li><a href="#">Первый пункт</a>
-					<ul>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Второй пункт</a></li>
-				<li><a href="#">Третий пункт</a></li>
-				<li><a href="#">Четвёртый пункт</a></li>
-			</ul>
+			<input type="button" value="Регистрация" id="btnOpenReg">
 
-			<p>2017 © <a href="#">Copyright</a></p>
+			<div class="regRes"></div>
+			<form method="post" action="" id="formReg">
+				<fieldset>
+					<div data-role="fieldcontain">
+						<input type="text" name="name" placeholder="Имя" required>
+						<input type="text" name="login" placeholder="Логин" required>
+						<input type="email" name="email" placeholder="E-mail" required>
+						<input type="password" name="pass" placeholder="Пароль" required>
+
+						<input type="submit" name="go-reg" value="Зарегистрироваться">
+					</div>
+				</fieldset>
+			</form>
+
 		</div>
 	</div>
 
+	<script src="script.js"></script>
 </body>
 
 </html>
